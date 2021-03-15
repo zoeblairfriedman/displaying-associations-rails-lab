@@ -1,0 +1,13 @@
+
+<h1><%=pluralize(@songs.all.count, "Song")%></h1>
+
+<ul>
+<% @songs.each do |song| %>
+    <div>
+        <a href="<%= song_path(song) %>">
+            <%= song.artist_name %> - <%= song.title %>
+        </a>
+    </div>
+    <% end %>
+    </ul>
+
